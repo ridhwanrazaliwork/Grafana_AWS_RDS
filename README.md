@@ -261,6 +261,28 @@ grafana_test/
 
 ---
 
+---
+
+## 🧹 Cleanup (Important: Avoid AWS Costs)
+
+⚠️ **To prevent unexpected charges, clean up these AWS resources after testing:**
+
+1. **Terminate RDS Database Instance**
+   - AWS Console → RDS → Databases → Select instance → Delete
+   - Uncheck "Create final snapshot" to avoid backup storage costs
+
+2. **Delete EC2 Instance** (if used for Grafana)
+   - AWS Console → EC2 → Instances → Select instance → Terminate instances
+
+3. **Remove Security Groups**
+   - AWS Console → EC2 → Security Groups → Delete any created for this project
+
+4. **Release Elastic IPs** (if assigned)
+   - AWS Console → EC2 → Elastic IPs → Release address
+
+
+---
+
 ## 📝 License
 
 This project is for educational and testing purposes.
