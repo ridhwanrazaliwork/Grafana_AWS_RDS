@@ -76,6 +76,8 @@ Before starting, ensure you have:
    - Source: **0.0.0.0/0** (allows all - for testing only)
 5. Click **Save rules**
 
+**WARNING (Testing only):** Do NOT enable public accessibility or leave Security Group source as `0.0.0.0/0` in production. Restrict access to `YOUR_IP/32`, a VPC-only subnet, or use a bastion/VPN for admin connections. Default VPC/public subnets and broad access are acceptable only for isolated experiments.
+
 ✅ **For Testing**: Using `0.0.0.0/0` allows anyone to connect (acceptable for testing)
 
 ⚠️ **Before Production**: Change source from `0.0.0.0/0` to your IP address (`YOUR_IP/32`) or your organization's IP range to restrict access
